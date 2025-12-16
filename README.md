@@ -8,10 +8,11 @@ With Habit Tracker, you can:
 - Browse all your habits in one place.
 - View a full timeline to track your daily progress over time.
 
-
-### Successful CI/CD
-<img width="585" height="118" alt="image" src="https://github.com/user-attachments/assets/3293421d-ef3f-4914-a5b5-8392c2e1765e" />
-
+### Kubernates Arch Diagram
+<br><br>
+<img width="1226" height="521" alt="habit-tracker01 drawio" src="https://github.com/user-attachments/assets/ee1ba2d3-2902-4ebc-a806-c42d12195dbe" />
+<br>
+ ### Kubernates Dashboard
 <img width="1368" height="765" alt="image" src="https://github.com/user-attachments/assets/f0e871e3-4e52-4fb1-9e64-6222bb50d542" />
 
 
