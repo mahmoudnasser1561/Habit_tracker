@@ -17,5 +17,8 @@ spec:
       containers:
       - name: habit-tracker
         image: mahmoudnasser8080/habit-tracker:latest
+        env:
+          - name: MONGO_URI
+            value: "mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/habit_tracker?replicaSet=rs0"
         ports:
           - containerPort: 5000
