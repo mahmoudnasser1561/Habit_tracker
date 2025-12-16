@@ -15,6 +15,7 @@ With Habit Tracker, you can:
  ### Kubernates Dashboard
 <img width="1368" height="765" alt="image" src="https://github.com/user-attachments/assets/f0e871e3-4e52-4fb1-9e64-6222bb50d542" />
 
+<img width="1298" height="496" alt="image" src="https://github.com/user-attachments/assets/2565f50d-cede-4231-8d23-a7e863190590" />
 
 ### Installation
 **first create a virtual env**
