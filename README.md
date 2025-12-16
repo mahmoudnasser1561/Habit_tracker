@@ -8,10 +8,6 @@ With Habit Tracker, you can:
 - Browse all your habits in one place.
 - View a full timeline to track your daily progress over time.
 
-![Screenshot from 2025-04-28 23-14-22](https://github.com/user-attachments/assets/39561131-db28-4387-a4a0-eecfc9829655)
-
-<img width="1226" height="521" alt="habit-tracker drawio" src="https://github.com/user-attachments/assets/c9aaea26-837b-4663-8fff-caaba67c5a17" />
-
 
 ### Successful CI/CD
 <img width="585" height="118" alt="image" src="https://github.com/user-attachments/assets/3293421d-ef3f-4914-a5b5-8392c2e1765e" />
