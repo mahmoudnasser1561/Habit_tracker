@@ -10,11 +10,11 @@ With Habit Tracker, you can:
 
 ### Kubernates Arch Diagram
 <br><br>
-<img width="1226" height="521" alt="habit-tracker01 drawio" src="https://github.com/user-attachments/assets/ee1ba2d3-2902-4ebc-a806-c42d12195dbe" />
+<img width="921" height="521" alt="habit-tracker02 drawio" src="https://github.com/user-attachments/assets/30da4ed9-fa49-49ba-a120-f2cec004b7c5" />
 <br>
  ### Kubernates Dashboard
 <img width="1368" height="765" alt="image" src="https://github.com/user-attachments/assets/f0e871e3-4e52-4fb1-9e64-6222bb50d542" />
-
+<br> <br>
 <img width="1298" height="496" alt="image" src="https://github.com/user-attachments/assets/2565f50d-cede-4231-8d23-a7e863190590" />
 
 ### Installation
