@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: habit-tracker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: habit-tracker
+  template:
+    metadata:
+      labels:
+        app: habit-tracker
+    spec:
+      containers:
+        - name: habit-tracker
+          image: mahmoudnasser8080/habit-tracker:latest
+          # imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
