@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: habit-tracker
+  name: {{ .Release.Name }}-habit-tracker
   labels:
     app: habit-tracker
 spec:
-  replicas: 2
+  replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
       app: habit-tracker
@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: habit-tracker
-        image: mahmoudnasser8080/habit-tracker:latest
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
-          - containerPort: 5000
+        - containerPort: 5000

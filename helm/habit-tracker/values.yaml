@@ -1,0 +1,11 @@
+replicaCount: 2
+
+image:
+  repository: mahmoudnasser8080/habit-tracker
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 5000
