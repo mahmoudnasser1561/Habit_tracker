@@ -11,6 +11,9 @@ With Habit Tracker, you can:
 ![Screenshot from 2025-04-28 23-08-49](https://github.com/user-attachments/assets/b695996e-0710-48db-80ff-a27d0e255249)
 ![Screenshot from 2025-04-28 23-14-22](https://github.com/user-attachments/assets/39561131-db28-4387-a4a0-eecfc9829655)
 
+### Successful CI/CD
+<img width="585" height="118" alt="image" src="https://github.com/user-attachments/assets/3293421d-ef3f-4914-a5b5-8392c2e1765e" />
+
 ### Installation
 **first create a virtual env**
 
