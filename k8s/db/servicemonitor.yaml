@@ -3,7 +3,7 @@ kind: ServiceMonitor
 metadata:
   name: mongo-exporter
   labels:
-    release: prom  # Matches the Helm release name
+    release: prom 
 spec:
   selector:
     matchLabels:
@@ -14,4 +14,4 @@ spec:
       path: /metrics
   namespaceSelector:
     matchNames:
-      - default  # Or your app's namespace
+      - default 
