@@ -1,0 +1,13 @@
+grafana:
+  adminPassword: admin1234  # Your custom password (default user is 'admin')
+
+prometheus:
+  prometheusSpec:
+    replicas: 1  # Your setting: Single Prometheus replica for lighter resource use
+    serviceMonitorSelectorNilUsesHelmValues: false  # Required for cross-namespace monitoring
+    serviceMonitorNamespaceSelector: {}  # Monitor all namespaces
+    serviceMonitorSelector: {}  # Select all ServiceMonitors (no label restriction)
+    additionalScrapeConfigs: []  # Optional: Add custom configs here if needed later
+
+nodeExporter:
+  enabled: true  # Your setting: Enables node-level metrics (CPU, memory, disk, etc.)
