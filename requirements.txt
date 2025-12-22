@@ -2,3 +2,4 @@ flask
 python-dotenv
 pymongo[srv]
 pymongo
+prometheus_flask_exporter
