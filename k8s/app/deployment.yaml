@@ -15,10 +15,36 @@ spec:
         app: habit-tracker
     spec:
       containers:
-      - name: habit-tracker
-        image: mahmoudnasser8080/habit-tracker:latest
-        env:
-          - name: MONGO_URI
-            value: "mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/habit_tracker?replicaSet=rs0"
-        ports:
-          - containerPort: 5000
+        - name: habit-tracker
+          image: mahmoudnasser8080/habit-tracker:latest
+          imagePullPolicy: Always  
+          env:
+            - name: MONGO_URI
+              value: "mongodb://mongo-0.mongo,mongo-1.mongo,mongo-2.mongo:27017/habit_tracker?replicaSet=rs0"
+          ports:
+            - containerPort: 5000
+              name: http  
+          resources:
+            requests:
+              cpu: "100m"  
+              memory: "128Mi"
+            limits:
+              cpu: "500m" 
+              memory: "512Mi"
+          livenessProbe:
+            httpGet:
+              path: /health  
+              port: 5000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            timeoutSeconds: 5
+            failureThreshold: 3
+          readinessProbe:
+            httpGet:
+              path: /health 
+              port: 5000
+            initialDelaySeconds: 10
+            periodSeconds: 5
+            timeoutSeconds: 3
+            successThreshold: 1
+            failureThreshold: 3
