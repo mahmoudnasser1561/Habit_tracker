@@ -13,32 +13,46 @@ spec:
       labels:
         role: mongo
     spec:
-      terminationGracePeriodSeconds: 10
+      terminationGracePeriodSeconds: 30
       containers:
         - name: mongo
           image: mongo:7.0
           command:
             - mongod
-            - --replSet
-            - rs0
-            - --bind_ip_all
+            - "--replSet=rs0"
+            - "--bind_ip_all"
           ports:
             - containerPort: 27017
+              name: mongo
           volumeMounts:
             - name: mongo-persistent-storage
               mountPath: /data/db
-        - name: mongo-sidecar
-          image: cvallance/mongo-k8s-sidecar
-          env:
-            - name: MONGO_SIDECAR_POD_LABELS
-              value: "role=mongo"
-            - name: KUBERNETES_MONGO_SERVICE_NAME
-              value: mongo
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+        - name: mongo-exporter
+          image: bitnami/mongodb-exporter:latest
+          args:
+            - --mongodb.uri=mongodb://localhost:27017
+          ports:
+            - containerPort: 9216
+              name: metrics
+          resources:
+            requests:
+              cpu: "50m"
+              memory: "64Mi"
+            limits:
+              cpu: "100m"
+              memory: "128Mi"
   volumeClaimTemplates:
     - metadata:
         name: mongo-persistent-storage
       spec:
-        accessModes: [ "ReadWriteOnce" ]
+        accessModes: ["ReadWriteOnce"]
         resources:
           requests:
-            storage: 1Gi  
+            storage: 1Gi
