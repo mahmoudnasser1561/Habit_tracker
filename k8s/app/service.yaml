@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: habit-tracker-service
+  labels: 
+    app: habit-tracker
 spec:
   selector:
     app: habit-tracker
@@ -9,4 +11,5 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 5000
+      name: http
   type: NodePort
