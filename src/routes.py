@@ -14,6 +14,10 @@ db = client['habit_tracker']
 habits_coll = db['habits']   
 completions_coll = db['completions'] 
 
+@pages.route('/health')
+def health():
+    return 'OK', 200
+
 @pages.context_processor
 def add_calc_date_range():
     def date_range(start: datetime.date):
