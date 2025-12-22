@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: mongo-exporter
+  labels:
+    release: prom  # Matches the Helm release name
+spec:
+  selector:
+    matchLabels:
+      role: mongo
+  endpoints:
+    - port: metrics
+      interval: 15s
+      path: /metrics
+  namespaceSelector:
+    matchNames:
+      - default  # Or your app's namespace
