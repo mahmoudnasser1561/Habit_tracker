@@ -2,10 +2,16 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo
+  labels: 
+    role: mongo
 spec:
-  clusterIP: None 
+  clusterIP: None
   selector:
     role: mongo
   ports:
-    - port: 27017
+    - name: mongo
+      port: 27017
       targetPort: 27017
+    - name: metrics
+      port: 9216
+      targetPort: 9216
